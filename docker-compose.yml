@@ -12,5 +12,5 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=3000
-      - DATABASE_URL=${DATABASE_URL:-postgresql://shenron:abirmallik76922247@host.docker.internal:5432/main_db}
-      - NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL:-https://sunnah.abirmallik.website}
+      - DATABASE_URL=${DATABASE_URL:-postgresql://shenron:abirmallik76922247@host.docker.internal:5432/sunnah_db}
+      - NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL:-https://thesunnahrecord.abirmallik.website}
