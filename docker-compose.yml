@@ -5,12 +5,9 @@ services:
       dockerfile: Dockerfile
     container_name: sunnah_record_app
     restart: always
-    ports:
-      - "3001:3000"
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+    network_mode: host
     environment:
       - NODE_ENV=production
-      - PORT=3000
-      - DATABASE_URL=${DATABASE_URL:-postgresql://shenron:abirmallik76922247@host.docker.internal:5432/sunnah_db}
+      - PORT=3001
+      - DATABASE_URL=${DATABASE_URL:-postgresql://shenron:abirmallik76922247@127.0.0.1:5432/sunnah_db}
       - NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL:-https://thesunnahrecord.abirmallik.website}
